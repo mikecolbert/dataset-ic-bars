@@ -1,2 +1,3 @@
 # dataset-ic-bars
-Name and address for each organization who has a liquor license in Iowa City
+
+Name and address for each organization in Iowa City who has a liquor license.
