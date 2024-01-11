@@ -75,7 +75,7 @@ def scrape():
 
     bars = WebDriverWait(driver, 30).until(
         EC.visibility_of_all_elements_located(
-            (By.XPATH, '//*[@id="tab-5"]/slot/c-iaabd-premise-public-access/article')
+            (By.XPATH, "//span[@class='slds-media__body']")
         )
     )
 
@@ -143,7 +143,7 @@ logging.info(f"Done scraping at {dt_now}")
 
 currentMonth = dt_now.month
 currentYear = dt_now.year
-filename = f"{currentYear}-{currentMonth}_iowa_city_liquor_license.csv"
+filename = f"../{currentYear}-{currentMonth}_{search_city}_liquor_license.csv"
 df.to_csv(filename, encoding="utf-8", index=False)
 
 driver.quit()
